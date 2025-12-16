@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <title>bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <style>
+    .dropdown-toggle::after {
+      display: none;
+    }
+
+    .dropdown-menu[data-bs-popper] {
+      left: -135px;
+      top: 100%;
+    }
+
+    .logo img {
+      width: 50px;
+      height: 50px;
+    }
+
+    .form-control {
+      width: 50px;
+    }
+
+    .my-circle {
+      width: 40px;
+      height: 40px;
+    }
+
+    .my-progress {
+      width: calc(100% - 2 * 20px - 8px * 2);
+    }
+  </style>
+  <!-- flex-shrink-0 防止圖片被壓縮 -->
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-primary bg-opacity-75">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="./bootstrap.img/fgo-icon.png" alt="Bootstrap" width="60" height="52">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="bi bi-cart-fill"></i></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-person-circle"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">login</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container-fluid bg-dark-subtle py-5">
+    <div class="container bg-light-subtle p-5 rounded-4 shadow-lg" style="width: 60%;">
+      <!-- style="width: 60%;"  style="height: 3000px;"-->
+      <h3>確認購物車</h3>
+      <div class="row">
+        <div class="col px-0 mx-0 mb-2 text-center  bg-transparent">
+          <div class="w-100 position-relative bg-transparent">
+            <div
+              class="mx-auto my-circle rounded-circle bg-success text-white d-flex justify-content-center align-items-center">
+              1
+            </div>
+            <div class="my-progress progress position-absolute top-50 start-100 translate-middle z-3">
+              <div class="progress-bar" style="width: 100%"></div>
+            </div>
+          </div>
+          <span>購物車</span>
+        </div>
+        <div class="col px-0 mx-0 mb-2 text-center  bg-transparent">
+          <div class="w-100 position-relative bg-transparent">
+            <div
+              class="mx-auto my-circle rounded-circle bg-success text-white d-flex justify-content-center align-items-center">
+              2
+            </div>
+            <div class="my-progress progress position-absolute top-50 start-100 translate-middle z-3">
+              <div class="progress-bar w-50"></div>
+            </div>
+          </div>
+          <span>付款方式</span>
+        </div>
+        <div class="col px-0 mx-0 mb-2 text-center  bg-transparent">
+          <div class="w-100 position-relative bg-transparent">
+            <div
+              class="mx-auto my-circle rounded-circle bg-success text-white d-flex justify-content-center align-items-center">
+              3
+            </div>
+            <div class="my-progress progress position-absolute top-50 start-100 translate-middle z-3">
+              <div class="progress-bar bg-transparent "></div>
+            </div>
+          </div>
+          <span>填寫資料</span>
+        </div>
+        <div class="col px-0 mx-0 mb-2 text-center  bg-transparent">
+          <div class="w-100 position-relative bg-transparent">
+            <div
+              class="mx-auto my-circle rounded-circle bg-success text-white d-flex justify-content-center align-items-center">
+              4
+            </div>
+          </div>
+          <span>完成訂單</span>
+        </div>
+      </div>
+      <hr class="my-4">
+      <!-- <h4>訂單明細</h4>
+      <div class="row">
+        <div class="col-2 d-flex align-content-center">
+          <div class="circle rounded-circle overflow-hidden ">
+            <img src="./bootstrap.img/Saintquartz.webp" class="w-100 h-100 " style="object-fit: cover;" alt="頭像">
+          </div>
+        </div>
+        <div class="col-8 align-self-center">
+          <div class="fs-5">Saintquartz</div>
+          <div class="fs-6">*1</div>
+        </div>
+        <div class="right d-flex justify-content-end ">
+          <button type="button" class="btn"><i class="bi bi-dash"></i></button>
+          <input type="text" class="form-control" id="" value="1">
+          <button type="button" class="btn"><i class="bi bi-plus"></i></button>
+          <div class="mx-3 d-flex align-items-center justify-content-end text-end">$30</div>
+        </div>
+      </div>
+      <hr class="my-4">
+      <div class="row">
+        <div class="col-2 d-flex align-content-center">
+          <div class="circle rounded-circle overflow-hidden ">
+            <img src="./bootstrap.img/Saintquartz.webp" class="w-100 h-100 " style="object-fit: cover;" alt="頭像">
+          </div>
+        </div>
+        <div class="col-8 align-self-center">
+          <div class="fs-5">Saintquartz</div>
+          <div class="fs-6">*25+16(free)</div>
+        </div>
+        <div class="right d-flex justify-content-end ">
+          <button type="button" class="btn"><i class="bi bi-dash"></i></button>
+          <input type="text" class="form-control" id="" value="1">
+          <button type="button" class="btn"><i class="bi bi-plus"></i></button>
+          <div class="mx-3 d-flex align-items-center justify-content-end text-end">$720</div>
+        </div>
+
+        <hr class="my-4">
+        <div class="row">
+          <div class="col-2 d-flex align-content-center">
+            <div class="circle rounded-circle overflow-hidden ">
+              <img src="./bootstrap.img/Saintquartz.webp" class="w-100 h-100 " style="object-fit: cover;" alt="頭像">
+            </div>
+          </div>
+          <div class="col-8 align-self-center">
+            <div class="fs-5">Saintquartz</div>
+            <div class="fs-6">*86+81(free)</div>
+          </div>
+          <div class="right d-flex justify-content-end ">
+            <button type="button" class="btn"><i class="bi bi-dash"></i></button>
+            <input type="text" class="form-control" id="" value="1">
+            <button type="button" class="btn"><i class="bi bi-plus"></i></button>
+            <div class="mx-1 d-flex align-items-center justify-content-end text-end">$2390</div>
+          </div> -->
+      <div class="fs-3 py-2">付款方式</div>
+      <div class="px-5 py-4">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="payment" id="radioDefault1" checked>
+          <label class="form-check-label" for="radioDefault1">
+            信用卡付款
+          </label>
+        </div>
+        <hr class="my-3">
+        
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="payment" id="radioDefault1" checked>
+          <label class="form-check-label" for="radioDefault1">
+            點卡儲值
+          </label>
+        </div>
+        <hr class="my-3">
+        
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="payment" id="radioDefault1" checked>
+          <label class="form-check-label" for="radioDefault1">
+            線上扣點
+          </label>
+        </div>
+      </div>
+
+       <div class="fs-3 py-2">發票類型</div>
+      <div class="px-5 py-4">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="payment" id="radioDefault1" checked>
+          <label class="form-check-label" for="radioDefault1">
+            電子發票
+          </label>
+        </div>
+        <hr class="my-3">
+        
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="payment" id="radioDefault1" checked>
+          <label class="form-check-label" for="radioDefault1">
+            捐贈發票
+          </label>
+        </div>
+
+      <!-- <hr class="my-3"> -->
+
+      <hr class="my-4">
+      <div class="row">
+        <div class="col-10"></div>
+        <div class="col-1">數量</div>
+        <div class="col-1 text-end">3</div>
+      </div>
+      <div class="row">
+        <div class="col-10"></div>
+        <div class="col-1">小計</div>
+        <div class="col-1 text-end">$3140</div>
+      </div>
+      <div class="row">
+        <div class="col-10"></div>
+        <div class="col-1">税</div>
+        <div class="col-1 text-end">$0</div>
+      </div>
+      <div class="row">
+        <div class="col-10"></div>
+        <div class="col-1">總計</div>
+        <div class="col-1 text-end">$3140</div>
+      </div>
+      <hr class="my-4">
+      <div class="d-flex justify-content-between">
+        <div class="align-self-center">
+          <i class="bi bi-arrow-left"></i>
+          <span>返回上一頁</span>
+        </div>
+        <!-- a button擇一使用 -->
+        <!-- a-> 跳到其他頁面 -->
+        <!-- button-> 有可能處理計算後再跳轉頁面 -->
+        <a href="./bootstsrap-hw.html">
+          <button type="button" class="btn btn-primary ">
+            下一步
+          </button>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container-fluid bg-light-subtile py-1">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-5 text-center text-sm-start">
+        <div class="col col-sm-12 align-content-center text-center my-4 my-lg-0">
+          <div class="logo">
+            <img class="" src="./bootstrap.img/chaldea.png" alt="">
+          </div>
+        </div>
+        <div class="col px-5 py-3 fs-5">商品
+          <div class="text fs-6">聖晶石</div>
+          <div class="text fs-6">優惠禮包</div>
+          <div class="text fs-6">官方周邊</div>
+          <div class="text fs-6">授權周邊</div>
+        </div>
+        <div class="col px-5 py-3 fs-5">付款與配送資訊
+          <div class="text fs-6">付款方式</div>
+          <div class="text fs-6">運送方法</div>
+          <div class="text fs-6">退換貨政策</div>
+          <div class="text fs-6">退款/取消訂單流程</div>
+        </div>
+        <div class="col px-5 py-3 fs-5">客服支援
+          <div class="text fs-6">一般問題</div>
+          <div class="text fs-6">線上客服</div>
+          <div class="text fs-6">反饋表單</div>
+        </div>
+        <div class="col px-5 py-3 fs-5">相關政策條款
+          <div class="text fs-6">隱私權政策</div>
+          <div class="text fs-6">使用條款</div>
+          <div class="text fs-6">購物安全說明</div>
+          <div class="text fs-6">免責聲明</div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
